@@ -8,9 +8,9 @@ class Usersdetail extends Model {
     return tableName
   }
 
-  fullName () {
-    return `${this.firstName} ${this.lastName}`
-  }
+  // fullName () {
+  //   return `${this.firstName} ${this.lastName}`
+  // }
 
   static get jsonSchema () {
     return {

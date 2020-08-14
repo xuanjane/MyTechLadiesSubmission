@@ -9,6 +9,7 @@ const indexRouter = require('./routes/index')
 const usersRouter = require('./routes/users')
 const dogsRouter = require('./routes/dogs')
 const usersdetailsRouter = require('./routes/usersdetails')
+const whysRouter = require('./routes/whys')
 
 const app = express()
 
@@ -22,6 +23,7 @@ app.use(cookieParser())
 app.use('/', indexRouter)
 app.use('/users', usersRouter)
 app.use('/api/dogs', dogsRouter)
-app.use('/users/userdetails', usersdetailsRouter)
+app.use('/users/usersdetails', usersdetailsRouter)
+app.use('/whys', whysRouter)
 
 module.exports = app

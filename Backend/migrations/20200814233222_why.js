@@ -1,15 +1,10 @@
-const { tableName } = require('../src/models/usersdetails')
+const { tableName } = require('../src/models/why')
 
 exports.up = (knex) => {
   return knex.schema.createTable(tableName, (table) => {
     //table.increments()
     table.text('email').index().references('email').inTable('users')
-    table.text('workplace').notNullable()
-    table.text('jobtitle')
-    table.text('interestingfact')
-    table.text('image')
-    table.text('github').unique()
-    table.text('linkedin').unique()
+    table.text('reason').notNullable()
     table.timestamps(true, true)
   })
 }
