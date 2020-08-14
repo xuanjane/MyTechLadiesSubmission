@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const debug = require('debug')('app:userdetails')
+const debug = require('debug')('app:usersdetails')
 const db = require('../models/index')
 
 /* GET users listing. */
@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
   debug('Hello World!')
 
   const users = await db.UserDetail.query().select('email', 'workplace', 'jobtitle', 'interestingfact', 'image', 'github', 'linkedin')
-  res.json(userdetails)
+  res.json(usersdetails)
 })
 
 // router.get('/', async (req, res) => {

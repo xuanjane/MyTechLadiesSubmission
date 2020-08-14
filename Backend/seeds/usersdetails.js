@@ -1,6 +1,6 @@
-const { tableName } = require('../src/models/userdetails')
+const { tableName } = require('../src/models/usersdetails')
 
-const SEED_USERDETAILS = [
+const SEED_USERSDETAILS = [
   {
     email: 'xuanjane88@gmail.com',
     workplace: 'Sengkang General Hospital',
@@ -28,6 +28,6 @@ exports.seed = (knex) => {
     .del()
     .then(function () {
       // Inserts seed user entries
-      return knex(tableName).insert(SEED_USERDETAILS)
+      return knex(tableName).insert(SEED_USERSDETAILS)
     })
 };

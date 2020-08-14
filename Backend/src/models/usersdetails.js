@@ -1,9 +1,9 @@
 'use strict'
 
 const { Model } = require('objection')
-const tableName = 'userdetails'
+const tableName = 'usersdetails'
 
-class Userdetail extends Model {
+class Usersdetail extends Model {
   static get tableName () {
     return tableName
   }
@@ -31,7 +31,7 @@ class Userdetail extends Model {
 }
 
 module.exports = {
-  Userdetail,
-  model: Userdetail,
+  Usersdetail,
+  model: Usersdetail,
   tableName
 }
