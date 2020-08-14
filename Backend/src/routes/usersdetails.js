@@ -7,7 +7,7 @@ const db = require('../models/index')
 router.get('/', async (req, res) => {
   debug('Hello World!')
 
-  const users = await db.UserDetail.query().select('email', 'workplace', 'jobtitle', 'interestingfact', 'image', 'github', 'linkedin')
+  const usersdetails = await db.Usersdetail.query().select('email', 'workplace', 'jobtitle', 'interestingfact', 'image', 'github', 'linkedin')
   res.json(usersdetails)
 })
 
