@@ -19,13 +19,14 @@ Hence, `userdetails` and `why` can only be populated after the corresponding col
 2. Verify that the knexfile.js is initialized with the correct database name of your preference
 3. Add your DB_USERNAME and DB_PASSWORD to .env file.
 4. Run the following commands in the terminal to prepare the databases and seed them with some dummy data
+
   NODE_ENV=development npm run db:migrate
 
   NODE_ENV=development npm run db:seed
 
   Start the app with npm run dev
 
-Visit http://localhost:3001/ to verify that the routes are working
+5. Visit http://localhost:3001/ to verify that the routes are working
 
 
 
@@ -38,30 +39,28 @@ Welcome and thanks for viewing my submission!
 
 2. http://localhost:3001/users
 
-The page is empty as I did not want any data exposed unless a correct query is input.
+The page is empty as I did not want any data exposed unless a correct query is input. If wrong query is input, the page will remain empty.
 
-Correct Queries examples:
+Examples of correct queries:
 
 http://localhost:3001/users/?name=jane
 
 http://localhost:3001/users/?name=tarzan
 
 
-If wrong query is input, the page will remain empty.
-
-Wrong Query examples:
+Examples of wrong queries:
 
 http://localhost:3001/users/?Names=jane
 
 http://localhost:3001/users/?email=jane
 
 
-If the data queried does not exist, the page will display "Not found".
+If the data queried does not exist, the page will display "Not found". Data is case-sensitive. Hence, all the seed names were input as small letters for consistency.
 
-Data is case-sensitive. Hence, all the seed names were input as small letters for consistency.
+Examples of "Not found" :
 
-"Not found" examples:
 http://localhost:3001/users/?name=Jane
+
 
 
 2. http://localhost:3001/users/fulllist
@@ -88,7 +87,7 @@ Else the page will display {"input":"wrong username or password"}
 2. http://localhost:3001/usersdetails/?email=tarzan@jungle.com&passwordHash=tarzan
 
 
-3. Similary, we can POST new usersdetails via POSTMAN, but only if the corresponding user has been populated in the ~users~ table.
+3. Similary, we can POST new usersdetails via POSTMAN, but only if the corresponding user has been populated in the `users` table.
 
 
 `whys`
@@ -100,4 +99,4 @@ Routes that display why i want to be part of the Techladies Bootcamp, based on e
 2. http://localhost:3001/whys/tarzan@jungle.com
 
 
-3. Similary, we can POST new whys via POSTMAN, but only if the corresponding user has been populated in the ~users~ table.
+3. Similary, we can POST new whys via POSTMAN, but only if the corresponding user has been populated in the `users` table.
