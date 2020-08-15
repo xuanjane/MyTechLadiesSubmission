@@ -39,7 +39,7 @@ Welcome and thanks for viewing my submission!
 
 2. http://localhost:3001/users
 
-The page is empty as I did not want any data exposed unless a correct query is input. If wrong query is input, the page will remain empty.
+The page is empty as I did not want any data exposed unless a correct query is input. If wrong query is input, the page will also remain empty.
 
 Examples of correct queries:
 
@@ -63,22 +63,22 @@ http://localhost:3001/users/?name=Jane
 
 
 
-2. http://localhost:3001/users/fulllist
+3. http://localhost:3001/users/fulllist
 
 The full list of users, without the id and password
 
 
-3. http://localhost:3001/users/:id
+4. http://localhost:3001/users/:id
 
-4. POST new users via POSTMAN
+5. POST new users via POSTMAN
 
 `usersdetails`
 
-The routes below takes in 2 queries: email and password Hash.
+The routes below takes in 2 queries: email and passwordHash.
 
-These queries are matched to the user table first to check if email and password have both been entered correctly.
+These queries are matched to the `user` table first to check if email and password have both been entered correctly.
 
-If both have been entered correctly, the userdetails table is then queried for more details about that particular user.
+If both have been entered correctly, the `userdetails` table is then queried for more details about that particular user.
 
 Else the page will display {"input":"wrong username or password"}
 
