@@ -3,6 +3,7 @@ const { tableName } = require('../src/models/usersdetails')
 exports.up = (knex) => {
   return knex.schema.createTable(tableName, (table) => {
     //table.increments()
+    table.increments('id').primary()
     table.text('email').index().references('email').inTable('users')
     table.text('workplace').notNullable()
     table.text('jobtitle')

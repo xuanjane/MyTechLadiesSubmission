@@ -7,7 +7,6 @@ const cors = require('cors')
 
 const indexRouter = require('./routes/index')
 const usersRouter = require('./routes/users')
-const dogsRouter = require('./routes/dogs')
 const usersdetailsRouter = require('./routes/usersdetails')
 const whysRouter = require('./routes/whys')
 
@@ -22,7 +21,6 @@ app.use(cookieParser())
 /* GET home page. */
 app.use('/', indexRouter)
 app.use('/users', usersRouter)
-app.use('/api/dogs', dogsRouter)
 app.use('/usersdetails', usersdetailsRouter)
 app.use('/whys', whysRouter)
 

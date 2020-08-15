@@ -21,6 +21,7 @@ const db = require("../models/user")
 //     return usersBylastName
 //   }
 
+/* Names should all be in small caps */
  exports.getUserByfullName = async function(name) {
     const usersByfirstName = await db.User.query().select().where('firstName', name)  
   
@@ -33,8 +34,7 @@ const db = require("../models/user")
     return usersByfirstName
   }
 
-  //Names should all be in small caps
-
+  
   exports.getUserByEmail = async function(email) {
     const usersByEmail = await db.User.query().select().where('email', email)  
       return usersByEmail
@@ -45,6 +45,7 @@ const db = require("../models/user")
     return usersByPassword
   }
 
+  /* Remember to input names in small caps only */
   exports.addUser = async function(user) {
     try {
       const response = await db.User.query().insert(user)

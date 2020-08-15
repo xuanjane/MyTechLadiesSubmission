@@ -6,9 +6,8 @@ const users = require('../helpers/users')
 
 const { UniqueViolationError } = require('objection')
 
-
+// ignore below comment lines
 // const request = require('request');
- 
 // var options = {
 //     url: '/fulllist',
 //     auth: {
@@ -16,24 +15,11 @@ const { UniqueViolationError } = require('objection')
 //         password: 'myPassword'
 //     }
 // };
- 
 // request.get(options);
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* GET users listing without password */
 router.get('/fulllist', async (req, res) => {
-//  debug('Hello World!')
   const userslisting = await db.User.query().select('firstName', 'lastName', 'email')
   res.json(userslisting)
 })
@@ -45,21 +31,18 @@ router.get('/fulllist', async (req, res) => {
 //   res.status(200).json(result)
 // })
 
-/* GET user by full name. */
+/* GET user by either first or last name. */
 router.get('/', async (req, res) => { 
+  // please ignore below comment lines
   // if (Object.keys(req.query).length === 0 || req.query.name === undefined ) {
   //   res.status(200).json()
   // }
-  const requestname = req.query.id
-  console.log(requestname)
-
+  //const requestname = req.query.id
+  //console.log(requestname)
   //res.setHeader("Authorization", "Basic abcde");
-  
-  res.redirect('/users/fulllist');
+  //res.redirect('/users/fulllist');
 
-
-
-  // No data is provided at this url unless a correct query is added
+  // No data is provided at this url unless a correct query is input
   if (req.query.name === undefined ) {
     res.status(200).json()
   }

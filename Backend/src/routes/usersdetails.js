@@ -27,7 +27,8 @@ router.get('/', async (req, res) => {
       const emailresult = email ? await users.getUserByEmail(email) : await users.getAllUsers()
       const passwordresult = password? await users.getUserByPassword(password) : await users.getAllUsers() 
 
-      // Check that the email and password matches before returning details
+      // Check that the email and password matches in user table before returning 
+      // information in userdetails table                                         
       if(JSON.stringify(emailresult[0]) === JSON.stringify(passwordresult[0])) {
         console.log("it matches")
         const usersdetailresult = email ? await usersdetails.getUsersdetailByEmail(email) : await usersdetails.getAllUsersdetails()

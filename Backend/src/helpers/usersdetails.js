@@ -16,29 +16,6 @@ const db = require("../models/usersdetails")
     return usersByPassword[0] || 'Not found'
   }
   
-// //   exports.getUserByfirstName = async function(firstName) {
-// //     const usersByfirstName = await db.User.query().select().where('firstName', firstName)
-// //     return usersByfirstName
-// //   }
-
-// //   exports.getUserBylastName = async function(lastName) {
-// //     const usersBylastName = await db.User.query().select().where('lastName', lastName)
-// //     return usersBylastName
-// //   }
-
-//  exports.getUserByfullName = async function(fullName) {
-//     const usersByfirstName = await db.User.query().select().where('firstName', fullName)     
-//     if (JSON.stringify(usersByfirstName) === '[]') {
-//       const usersBylastName = await db.User.query().select().where('lastName', fullName)
-//       if (JSON.stringify(usersBylastName) === '[]') return 'Not found'
-//       else return usersBylastName
-//     }
-//     return usersByfirstName
-//   }
-
-//   //Names should all be in small caps
-
-
   exports.addUsersdetails = async function(usersdetails) {
     try {
       const response = await db.Usersdetail.query().insert(usersdetails)
