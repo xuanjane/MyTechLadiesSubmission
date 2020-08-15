@@ -17,7 +17,7 @@ class Usersdetail extends Model {
       type: 'object',
       required: ['email'],
       properties: {
-        id: { type: 'integer' },
+        //id: { type: 'integer' },
         email: { type: 'string', minLength: 1, maxLength: 255 },
         workplace: { type: 'string', maxLength: 255},
         jobtitle: { type: 'string', maxLength: 255},

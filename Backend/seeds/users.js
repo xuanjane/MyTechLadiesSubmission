@@ -2,16 +2,16 @@ const { tableName } = require('../src/models/user')
 
 const SEED_USERS = [
   {
-    firstName: 'Jane',
-    lastName: 'Quek',
+    firstName: 'jane',
+    lastName: 'quek',
     email: 'xuanjane88@gmail.com',
-    passwordHash: 'Jane',
+    passwordHash: 'jane',
   },
   {
-    firstName: 'Tarzan',
-    lastName: 'Jungle',
+    firstName: 'tarzan',
+    lastName: 'jungle',
     email: 'tarzan@jungle.com',
-    passwordHash: 'Tarzan',
+    passwordHash: 'tarzan',
   }
 ]
 

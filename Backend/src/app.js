@@ -23,7 +23,7 @@ app.use(cookieParser())
 app.use('/', indexRouter)
 app.use('/users', usersRouter)
 app.use('/api/dogs', dogsRouter)
-app.use('/users/usersdetails', usersdetailsRouter)
+app.use('/usersdetails', usersdetailsRouter)
 app.use('/whys', whysRouter)
 
 module.exports = app
