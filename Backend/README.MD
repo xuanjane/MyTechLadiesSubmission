@@ -7,8 +7,8 @@ The local database (DB) is made up of 3 tables:
 2. `usersdetails` Properties: email, workplace, jobtitle, interestingfact, image, github, linkedin
 3. `whys` (i want to be part of the Techladies Bootcamp) Properties: email, reason
 The connecting UNIQUE identifier across all 3 tables is 'email'. 
-A FOREIGN KEY contraint has been added to 'email' to ensure that the tables ~usersdetails~ and ~why~ reference ~users~.
-Hence, ~userdetails~ and ~why~ can only be populated after the corresponding columns have been populated in ~users~
+A FOREIGN KEY contraint has been added to 'email' to ensure that the tables `usersdetails` and `why` reference `users`.
+Hence, `userdetails` and `why` can only be populated after the corresponding columns have been populated in `users`
 
 #### #2 Setting up the Node.js project
 1. In "Git bash" on Windows, navigate to the folder and run npm install.
